@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 30.331 sec <<< FAILURE! - in TestSuite
+runScenario(testRunner.TestRunner)  Time elapsed: 27.861 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at stepDefinitions.Steps.user_clicks_on_link_o2_service_live_chat(Steps.java:41)
+	at ✽.User clicks on link O2 Service live chat(file:///F:/ProjectsEclipse/O2Cucumber/com.cucumber.o2/src/test/resources/Features/Login.feature:8)
+
