@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Aug 19, 2023 03:40:05 am</span></a>
+<a href="#"><span class="badge badge-primary">Aug 21, 2023 11:20:07 pm</span></a>
 </li>
 </ul>
 </div>
@@ -61,13 +61,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Aug 19, 2023 03:40:05 am</h3>
+<h3>Aug 21, 2023 11:20:07 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Aug 19, 2023 03:40:24 am</h3>
+<h3>Aug 21, 2023 11:21:02 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -138,7 +138,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>7</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>8</b> steps passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -157,10 +157,27 @@
 </div></div>
 <script>
 var timeline = {
-"Chat Monitoring":17.861
+"Chat Monitoring":53.721
 };
 </script>
 <div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@smoke</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
 <div class="col-lg-6 col-md-12 sysenv-container">
 <div class="card">
 <div class="card-header"><p>System/Environment</p></div>
@@ -199,7 +216,7 @@ warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 7,
+passGrandChild: 8,
 failGrandChild: 0,
 warningGrandChild: 0,
 skipGrandChild: 0,
@@ -221,6 +238,12 @@ eventsCount: 5,
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
 </li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@smoke</a>
+</ul>
+</li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
@@ -231,7 +254,7 @@ eventsCount: 5,
           <div class="test-detail">
             <p class="name">Chat Monitoring</p>
             <p class="text-sm">
-              <span>3:40:06 am</span> / <span>00:00:17:861</span>
+              <span>11:20:08 pm</span> / <span>00:00:53:721</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -240,9 +263,9 @@ eventsCount: 5,
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Chat Monitoring</h5>
-<span class='badge badge-success'>08.19.2023 3:40:06 am</span>
-<span class='badge badge-danger'>08.19.2023 3:40:24 am</span>
-<span class='badge badge-default'>00:00:17:861</span>
+<span class='badge badge-success'>08.21.2023 11:20:08 pm</span>
+<span class='badge badge-danger'>08.21.2023 11:21:02 pm</span>
+<span class='badge badge-default'>00:00:53:721</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -257,44 +280,81 @@ eventsCount: 5,
         <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Verifying the O2 Chat Monitoring System</div>
       </div>
     </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="stepDefinitions.Steps.user_launch_browser()">
-                <span>Given User Launch Browser</span>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>Verifying the O2 Chat Monitoring System</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given User Launch Browser and opens URL "https://www.o2online.de/chat-auswahl"</span>
       <div>
       </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.Steps.user_opens_url(java.lang.String)">
-                <span>When User opens URL "https://www.o2online.de/chat-auswahl"</span>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User clicks on link O2 Service live chat</span>
       <div>
       </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.Steps.user_clicks_on_link_o2_service_live_chat()">
-                <span>When User clicks on link O2 Service live chat</span>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And click LoginButton</span>
       <div>
       </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.Steps.user_enters_username_as_and_password_as(java.lang.String,java.lang.String)">
-                <span>And User enters username as "priyakhare123" and password as "priyakhare123"</span>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User enters username as "4917661590911" and password as "o2-FreeS-CCT-141076"</span>
       <div>
       </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.Steps.click_on_login()">
-                <span>And Click on Login</span>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then start the chat "Hi"</span>
       <div>
       </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.Steps.verify_the_title()">
-                <span>Then verify the title</span>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Get Chat History</span>
+      <div>Message send by dialog-message-agent
+      </div>
+      <div>Message Details Herzlich willkommen in der Chat-Warteschleife. Du wirst schnellstmöglich mit dem nächsten freien Chat-Berater verbunden.<br>
+Kennst du schon unsere Mein o2 App? Hier kannst du deine Verträge selbst verwalten, persönliche Daten ändern und deine Rechnung einsehen. Ganz bequem von zu Hause oder unterwegs. <a class="lnk-inline" target="_blank" href="http://g.o2.de/app2"><b>Hier klicken</b></a> und auf dem Smartphone installieren!
+      </div>
+      <div>Agent Replyt Hi
+      </div>
+      <div>Agent Replyt This is the Test Chat, Thank You!
+      </div>
+      <div>Message send by dialog-message-customer
+      </div>
+      <div>Message Details <span class="sender" o2chat-ph="chat.messageSender">IVR-CRT Rémy SCHLOSSER</span> <span class="text" o2chat-ph="chat.messageText">Hi</span>
+      </div>
+      <div>Sender Text Hi
+      </div>
+      <div>Sender Text This is the Test Chat, Thank You!
+      </div>
+      <div>Message send by dialog-message-customer
+      </div>
+      <div>Message Details <span class="sender" o2chat-ph="chat.messageSender">IVR-CRT Rémy SCHLOSSER</span> <span class="text" o2chat-ph="chat.messageText">This is the Test Chat, Thank You!</span>
+      </div>
+      <div>Sender Text Hi
+      </div>
+      <div>Sender Text This is the Test Chat, Thank You!
+      </div>
       <div>
       </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.Steps.close_the_browser()">
-                <span>And close the browser</span>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then End the Chat</span>
       <div>
       </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And close the browser</span>
+      <div>
+      </div>
+                  </div>
               </div>
-          </div>
+            </div>
         </div>
   </div>
 </div>

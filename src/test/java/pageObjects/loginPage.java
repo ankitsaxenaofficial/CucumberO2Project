@@ -1,12 +1,12 @@
 package pageObjects;
 
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import utilties.Helper;
 
 public class loginPage {
@@ -34,7 +34,12 @@ public class loginPage {
 		
 	}
 
-	public void Login() {
+	public void Login() throws InterruptedException {
+		
+		Set<String> Child_id = ldriver.getWindowHandles(); 
+		for(String win: Child_id) {
+		ldriver.switchTo().window(win);
+		}
 		
 		Helper.clickWebElement(loginBtn);
 		if(!ldriver.getCurrentUrl().contains("/auth/login?"))

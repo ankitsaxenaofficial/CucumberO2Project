@@ -3,20 +3,17 @@ package stepDefinitions;
 import java.util.Set;
 
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import io.cucumber.java.en.*;
 import pageObjects.*;
 
-public class Steps {
+public class Steps extends BaseClass {
 
-	
-	WebDriver driver = new ChromeDriver();
 	homePage homeP = new homePage(driver);
 	loginPage loginP = new loginPage(driver);
+	ChatPage chatP = new ChatPage(driver);
 
-	
+	//Scenario 1 - Chat Route
 	@Given("User Launch Browser and opens URL {string}")
 	public void user_launch_browser_and_opens_url(String url) throws InterruptedException {
 		
@@ -38,19 +35,20 @@ public class Steps {
 	}
 
 
-	@Then("Update the Url {string}") public void update_the_url(String
-			updatedUrl) {
-
-		Set<String> Child_id = driver.getWindowHandles(); for(String win: Child_id) {
-			driver.switchTo().window(win); }
-
-		driver.get(updatedUrl); 
-	}
- 
+	/*
+	 * @Then("Update the Url {string}") public void update_the_url(String
+	 * updatedUrl) {
+	 * 
+	 * Set<String> Child_id = driver.getWindowHandles(); for(String win: Child_id) {
+	 * driver.switchTo().window(win); }
+	 * 
+	 * driver.get(updatedUrl); }
+	 */ 
 
 	@Then("click LoginButton")
-	public void click_login_button() {
+	public void click_login_button() throws InterruptedException {
 
+		switchToLatestWindow();
 		loginP.Login();
 	}
 
@@ -61,21 +59,38 @@ public class Steps {
 
 	}
 
-	@When("Click on Login")
-	public void click_on_login() {
-
+	@Then("start the chat {string}")
+	public void start_the_chat(String chatMsg) throws InterruptedException {
+		
+		chatP.startLiveChat(chatMsg);
+	}
+	
+	@Then("Get Chat History")
+	public void get_chat_history() {
+	    
+		chatP.getChatHistory();
 	}
 
-	@Then("verify the title")
-	public void verify_the_title() {
-
+	@Then("End the Chat")
+	public void end_the_chat() throws InterruptedException {
+	    
+		chatP.endChat();
 	}
-
 	@Then("close the browser")
 	public void close_the_browser() {
 
 		driver.quit();
 	}
-
-
+	
+	
+	
+	public void switchToLatestWindow() {
+		Set<String> Child_id = driver.getWindowHandles(); 
+		for(String win: Child_id) {
+		
+				driver.switchTo().window(win);
+		}
+	}
+			
+		
 }
