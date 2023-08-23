@@ -30,7 +30,7 @@
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
-    <version>3.141.5</version>
+    <version>4.11.0</version>
 </dependency>
 
 
@@ -47,11 +47,6 @@
     <type>pom</type>
 </dependency>
 
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-	    <artifactId>selenium-server</artifactId>
-    <version>3.141.5</version>
-</dependency>
 
 <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
 <dependency>

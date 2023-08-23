@@ -17,6 +17,7 @@ public class Steps extends BaseClass {
 	@Given("User Launch Browser and opens URL {string}")
 	public void user_launch_browser_and_opens_url(String url) throws InterruptedException {
 		
+		  
 		  driver.get(url); 
 		  driver.manage().window().maximize(); Thread.sleep(6000);
 		 
@@ -33,17 +34,6 @@ public class Steps extends BaseClass {
 
 		homeP.clickServiceChatLink();		
 	}
-
-
-	/*
-	 * @Then("Update the Url {string}") public void update_the_url(String
-	 * updatedUrl) {
-	 * 
-	 * Set<String> Child_id = driver.getWindowHandles(); for(String win: Child_id) {
-	 * driver.switchTo().window(win); }
-	 * 
-	 * driver.get(updatedUrl); }
-	 */ 
 
 	@Then("click LoginButton")
 	public void click_login_button() throws InterruptedException {
