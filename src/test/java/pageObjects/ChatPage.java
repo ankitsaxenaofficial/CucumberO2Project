@@ -76,10 +76,14 @@ public class ChatPage {
 		
 		PropertyConfigurator.configure("log4j.properties");
 		
+		ExtentCucumberAdapter.addTestStepLog("<b><font color='red'>Chat Inititated</font></b>");
+		
 		List<WebElement> textMsg = ldriver.findElements(By.xpath("//span[@class='text']"));
 		List<WebElement> msgSender = ldriver.findElements(By.xpath("//span[@class='sender']"));
 		int listDifference = textMsg.size()-msgSender.size();
 		for(int i=listDifference; i<textMsg.size()-listDifference;i++) {			
+			
+			ExtentCucumberAdapter.addTestStepLog("<b><font color='green'>>>>>>>>>>>>>>>>>>>>>>>></font></b>");
 			
 			String messageFrom = msgSender.get(i-listDifference).getAttribute("innerHTML");
 			ExtentCucumberAdapter.addTestStepLog("Chat From: "+"<b><font color='blue'>"+messageFrom+"</font></b>");
@@ -93,6 +97,8 @@ public class ChatPage {
 
 	public void endChat() throws InterruptedException {
 
+		ExtentCucumberAdapter.addTestStepLog("<b><font color='green'>>>>>>>>>>>>>>>>>>>>>>>></font></b>");
+		
 		Thread.sleep(10000);
 		Helper.clickWebElement(endChatBtn);
 		Helper.clickWebElement(confirmYes);
