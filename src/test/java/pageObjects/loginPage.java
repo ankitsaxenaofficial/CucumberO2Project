@@ -36,9 +36,12 @@ public class loginPage {
 
 	public void Login() throws InterruptedException {
 		
+		
 		Set<String> Child_id = ldriver.getWindowHandles(); 
 		for(String win: Child_id) {
+			
 		ldriver.switchTo().window(win);
+			Thread.sleep(10000);
 		}
 		
 		Helper.clickWebElement(loginBtn);

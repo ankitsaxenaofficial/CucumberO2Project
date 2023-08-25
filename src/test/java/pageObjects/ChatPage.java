@@ -65,6 +65,7 @@ public class ChatPage {
 
 	public void startLiveChat(String chatText) throws InterruptedException {
 
+		Thread.sleep(10000);
 		Helper.enterText(chatBox, chatText);
 		Helper.clickWebElement(startLiveChatBtn);
 		Thread.sleep(15000);
