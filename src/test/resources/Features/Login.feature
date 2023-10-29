@@ -9,7 +9,7 @@ Feature: Chat Monitoring
     When User clicks on link O2 Service live chat
     #Then Update the Url "https://www.o2online.de/chat-ui/chat.html?cg=bk&sn=CCT_C_MONITOR"
  		And click LoginButton
-    And User enters username as "4917661590911" and password as "o2-FreeS-CCT-141076"
+    And User enters username as "xxx" and password as "xxx"
     #And Click on Login
     Then start the chat <ChatMsg>
     And Get Chat History
